@@ -1,6 +1,34 @@
-<!-- Contact -->
-<section id="contact" class="contact">
-  <h2>Contact</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact | Shlok Mishra</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    body {
+      font-family: Inter, sans-serif;
+      background: #0f172a;
+      color: #e5e7eb;
+      padding: 100px 12%;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: block;
+      margin-top: 15px;
+      color: #38bdf8;
+      font-size: 1.1rem;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Contact Me</h1>
   <p>Let’s connect and build something meaningful.</p>
 
   <a href="mailto:anshulmishra.0805@gmail.com">
@@ -14,4 +42,9 @@
   <a href="https://www.instagram.com/_shlokmishra?igsh=a3dlc3lpZHNja3E=" target="_blank">
     📸 Instagram
   </a>
-</section>
+
+  <br>
+  <a href="index.html">← Back to Home</a>
+
+</body>
+</html>
