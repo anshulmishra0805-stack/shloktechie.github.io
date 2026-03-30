@@ -1,37 +1,203 @@
-<html>
-<title>
-<heading> My Assignment </heading>
-</title>
-<body> This is our first program in html.
-We want to learn html and that's why we have decided to learn it through the practicals directly.
-<H1><u>First Day</u></H1>
-<p> Ok so here in the first day we will learn how to move text.
-<marquee>Ye dekh moving text </marquee>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shlok Mishra | Analyst Portfolio</title>
 
-<H1><u>Second Day</u></H1>
-<p> If you want to know how much PF has been stored in your bank account.</p>
-<img src="C:\Users\smishra\OneDrive - SeritiZA\Pictures\Bank.jpg" alt="Bank">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-<H1><u>Third Day</u></H1>
-<p>Ok so now we will be proceeding ahead with the third thing entering list.</p>
-<p>Likhte likhte bhookh lag aayi. 
-<li>Dosa</li>
-<li>Pizza</li>
-<li>Momos</li>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
 
-But Mujhe to thali pasand hai HCL ki 50 rupay wali and that includes
-<ul>Dal</ul>
-<ul>Chawal</ul>
-<ul>Sookhi sabzi</ul>
-<ul>Roti</ul>
-<ul>Ek aur sabzi</ul>
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
 
-<H1><u>Fourth Day</u></H1> 
-<p> Ab waqt hai text se khelna ka </p>
-<p style="color:red"> Experiment No.1</p>
-<p style="font-size:30px"> Experiment No.2</p>
-<p style="font-family:verdana"> Experiment No.3</p>
-<p style="color:blue""font-size:24px""font-family:verdana"> Experiment No.4</p>
+    a {
+      text-decoration: none;
+      color: #38bdf8;
+    }
 
-</body>
-</html>
+    section {
+      padding: 80px 12%;
+    }
+
+    h1, h2, h3 {
+      color: #f8fafc;
+    }
+
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #cbd5f5;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.9);
+      padding: 15px 12%;
+      display: flex;
+      justify-content: space-between;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #f1f5f9;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      max-width: 600px;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      padding: 12px 24px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .btn.outline {
+      background: transparent;
+      border: 2px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    /* About */
+    .about p {
+      max-width: 800px;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 0 0 transparent;
+      transition: 0.3s;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.25);
+    }
+
+    /* Projects */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+    }
+
+    .project-card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 25px rgba(56,189,248,0.3);
+    }
+
+    .project-card h3 {
+      margin-bottom: 10px;
+    }
+
+    /* Contact */
+    .contact a {
+      display: block;
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #64748b;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <h3>TechShalk</h3>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1>Hi, I'm <span>Shlok Mishra</span></h1>
+      <p>
+        Analyst | Data & Business Insights  
