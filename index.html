@@ -2,49 +2,232 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact | Shlok Mishra</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shlok Mishra | Analyst Portfolio</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      font-family: Inter, sans-serif;
-      background: #0f172a;
-      color: #e5e7eb;
-      padding: 100px 12%;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
     }
 
-    h1 {
-      margin-bottom: 20px;
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
     }
 
     a {
-      display: block;
-      margin-top: 15px;
-      color: #38bdf8;
-      font-size: 1.1rem;
       text-decoration: none;
+      color: #38bdf8;
+    }
+
+    section {
+      padding: 90px 12%;
+    }
+
+    h1, h2, h3 {
+      color: #f8fafc;
+    }
+
+    h2 {
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+    }
+
+    p {
+      color: #cbd5f5;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 15px 12%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      backdrop-filter: blur(8px);
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: #f1f5f9;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    /* Hero */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 15px;
+    }
+
+    .hero span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      max-width: 650px;
+      margin-bottom: 30px;
+      font-size: 1.1rem;
+    }
+
+    .btn {
+      padding: 12px 26px;
+      background: #38bdf8;
+      color: #020617;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-right: 10px;
+      display: inline-block;
+    }
+
+    .btn.outline {
+      background: transparent;
+      border: 2px solid #38bdf8;
+      color: #38bdf8;
+    }
+
+    /* Skills */
+    .skills-grid,
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card,
+    .project-card {
+      background: #020617;
+      padding: 25px;
+      border-radius: 12px;
+      transition: 0.3s ease;
+    }
+
+    .skill-card:hover,
+    .project-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 0 28px rgba(56, 189, 248, 0.25);
+    }
+
+    /* Vertical Resume Tab */
+    .resume-tab {
+      position: fixed;
+      left: -35px;
+      top: 50%;
+      transform: translateY(-50%) rotate(-90deg);
+      transform-origin: left top;
+      background: #38bdf8;
+      color: #020617;
+      padding: 12px 20px;
+      font-weight: 600;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
+      z-index: 2000;
+    }
+
+    .resume-tab:hover {
+      background: #0ea5e9;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #64748b;
     }
   </style>
 </head>
+
 <body>
 
-  <h1>Contact Me</h1>
-  <p>Let’s connect and build something meaningful.</p>
+  <!-- Navbar -->
+  <nav>
+    <h3>TechShalk</h3>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="Contacts.html">Contact</a></li>
+    </ul>
+  </nav>
 
-  <a href="mailto:anshulmishra.0805@gmail.com">
-    📧 anshulmishra.0805@gmail.com
+  <!-- Hero -->
+  <section class="hero">
+    <div>
+      <h1>Hi, I'm <span>Shlok Mishra</span></h1>
+      <p>
+        Analyst turned problem‑solver, driven by data and technology.<br><br>
+        I transform complex information into actionable insights that help businesses make smarter decisions.
+      </p>
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="Contacts.html" class="btn outline">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I am an Analyst based in Lucknow with a strong interest in troubleshooting, automation,
+      and data‑driven problem solving.
+    </p>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>Troubleshooting</h3></div>
+      <div class="skill-card"><h3>Automation</h3></div>
+      <div class="skill-card"><h3>Data Analysis</h3></div>
+      <div class="skill-card"><h3>Power BI & SQL</h3></div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">Troubleshooting Solutions</div>
+      <div class="project-card">Process Automation</div>
+      <div class="project-card">Operational Dashboards</div>
+    </div>
+  </section>
+
+  <!-- Vertical Download Resume Tab -->
+  <a href="resume.pdf" class="resume-tab" download>
+    ⬇ Download Resume
   </a>
 
-  <a href="https://www.linkedin.com/in/shlok-mishra-13a8a7377" target="_blank">
-    🔗 LinkedIn
-  </a>
-
-  <a href="https://www.instagram.com/_shlokmishra?igsh=a3dlc3lpZHNja3E=" target="_blank">
-    📸 Instagram
-  </a>
-
-  <br>
-  <a href="C:\Users\shlok_mishra\OneDrive - HCL TECHNOLOGIES LIMITED\Documents\Home.html">← Back to Home</a>
+  <!-- Footer -->
+  <footer>
+    © 2026 Shlok Mishra · TechShalk Portfolio
+  </footer>
 
 </body>
 </html>
