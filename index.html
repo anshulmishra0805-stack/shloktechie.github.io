@@ -133,26 +133,32 @@
       box-shadow: 0 0 28px rgba(56, 189, 248, 0.25);
     }
 
-    /* Horizontal Resume Tab (Left Side) */
-    .resume-tab {
-      position: fixed;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #38bdf8;
-      color: #020617;
-      padding: 14px 24px;
-      font-weight: 600;
-      border-radius: 0 8px 8px 0;
-      box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
-      z-index: 2000;
-      transition: background 0.3s ease, padding 0.3s ease;
-    }
+  /* Download Resume Button - Bottom Right */
+.resume-tab {
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background: #38bdf8;
+  color: #020617;
+  padding: 14px 24px;
+  font-weight: 600;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
+  z-index: 2000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-    .resume-tab:hover {
-      background: #0ea5e9;
-      padding-left: 32px;
-    }
+.resume-tab:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.6);
+}
+
+/* Optional: Hide on mobile */
+@media (max-width: 768px) {
+  .resume-tab {
+    display: none;
+  }
+}
 
     /* Footer */
     footer {
@@ -226,9 +232,9 @@
   </section>
 
   <!-- Horizontal Download Resume Tab -->
-  <a href="resume.pdf" class="resume-tab" download>
-    ⬇ Download Resume
-  </a>
+<!-- Download Resume Button -->
+<a href="resume.pdf"oad Resume
+</a>
 
   <!-- Footer -->
   <footer>
