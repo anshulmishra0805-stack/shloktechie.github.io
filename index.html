@@ -111,7 +111,7 @@
       color: #38bdf8;
     }
 
-    /* Skills */
+    /* Skills & Projects */
     .skills-grid,
     .projects-grid {
       display: grid;
@@ -133,24 +133,25 @@
       box-shadow: 0 0 28px rgba(56, 189, 248, 0.25);
     }
 
-    /* Vertical Resume Tab */
+    /* Horizontal Resume Tab (Left Side) */
     .resume-tab {
       position: fixed;
-      left: -35px;
+      left: 0;
       top: 50%;
-      transform: translateY(-50%) rotate(-90deg);
-      transform-origin: left top;
+      transform: translateY(-50%);
       background: #38bdf8;
       color: #020617;
-      padding: 12px 20px;
+      padding: 14px 24px;
       font-weight: 600;
-      border-radius: 0 0 8px 8px;
+      border-radius: 0 8px 8px 0;
       box-shadow: 0 10px 25px rgba(56, 189, 248, 0.4);
       z-index: 2000;
+      transition: background 0.3s ease, padding 0.3s ease;
     }
 
     .resume-tab:hover {
       background: #0ea5e9;
+      padding-left: 32px;
     }
 
     /* Footer */
@@ -159,6 +160,21 @@
       padding: 30px;
       background: #020617;
       color: #64748b;
+    }
+
+    /* Hide resume tab on mobile */
+    @media (max-width: 768px) {
+      .resume-tab {
+        display: none;
+      }
+
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      section {
+        padding: 80px 8%;
+      }
     }
   </style>
 </head>
@@ -189,15 +205,6 @@
     </div>
   </section>
 
-  <!-- About -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I am an Analyst based in Lucknow with a strong interest in troubleshooting, automation,
-      and data‑driven problem solving.
-    </p>
-  </section>
-
   <!-- Skills -->
   <section id="skills">
     <h2>Skills</h2>
@@ -218,7 +225,7 @@
     </div>
   </section>
 
-  <!-- Vertical Download Resume Tab -->
+  <!-- Horizontal Download Resume Tab -->
   <a href="resume.pdf" class="resume-tab" download>
     ⬇ Download Resume
   </a>
