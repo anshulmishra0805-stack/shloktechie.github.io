@@ -80,6 +80,15 @@
       align-items: center;
     }
 
+    /* New: hero grid to place GIF on the right */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 40px;
+      align-items: center;
+      width: 100%;
+    }
+
     .hero h1 {
       font-size: 3.5rem;
       margin-bottom: 15px;
@@ -111,6 +120,27 @@
       color: #38bdf8;
     }
 
+    /* GIF container */
+    .hero-gif {
+      width: 100%;
+      max-width: 420px;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #020617;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px;
+      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.08);
+    }
+
+    .hero-gif img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
     /* Skills & Projects */
     .skills-grid,
     .projects-grid {
@@ -134,31 +164,31 @@
     }
 
   /* Download Resume Button - Bottom Right */
-.resume-tab {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  background: #38bdf8;
-  color: #020617;
-  padding: 14px 24px;
-  font-weight: 600;
-  border-radius: 12px;
-  box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
-  z-index: 2000;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.resume-tab:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 18px 40px rgba(56, 189, 248, 0.6);
-}
-
-/* Optional: Hide on mobile */
-@media (max-width: 768px) {
   .resume-tab {
-    display: none;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background: #38bdf8;
+    color: #020617;
+    padding: 14px 24px;
+    font-weight: 600;
+    border-radius: 12px;
+    box-shadow: 0 12px 30px rgba(56, 189, 248, 0.4);
+    z-index: 2000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-}
+
+  .resume-tab:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgba(56, 189, 248, 0.6);
+  }
+
+  /* Optional: Hide on mobile */
+  @media (max-width: 768px) {
+    .resume-tab {
+      display: none;
+    }
+  }
 
     /* Footer */
     footer {
@@ -168,10 +198,17 @@
       color: #64748b;
     }
 
-    /* Hide resume tab on mobile */
+    /* Responsive adjustments */
+    @media (max-width: 980px) {
+      .hero-grid {
+        grid-template-columns: 1fr 320px;
+      }
+    }
+
     @media (max-width: 768px) {
-      .resume-tab {
-        display: none;
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
       }
 
       .hero h1 {
@@ -180,6 +217,11 @@
 
       section {
         padding: 80px 8%;
+      }
+
+      .hero-gif {
+        max-width: 100%;
+        padding: 8px;
       }
     }
   </style>
@@ -200,14 +242,22 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div>
-      <h1>Hi, I'm <span>Shlok Mishra</span></h1>
-      <p>
-        Analyst turned problem‑solver, driven by data and technology.<br><br>
-        I transform complex information into actionable insights that help businesses make smarter decisions.
-      </p>
-      <a href="#projects" class="btn">View My Work</a>
-      <a href="Contacts.html" class="btn outline">Contact Me</a>
+    <div class="hero-grid">
+      <div>
+        <h1>Hi, I'm <span>Shlok Mishra</span></h1>
+        <p>
+          Analyst turned problem‑solver, driven by data and technology.<br><br>
+          I transform complex information into actionable insights that help businesses make smarter decisions.
+        </p>
+        <a href="#projects" class="btn">View My Work</a>
+        <a href="Contacts.html" class="btn outline">Contact Me</a>
+      </div>
+
+      <!-- GIF on the right side -->
+      <div class="hero-gif" aria-hidden="false">
+        <!-- Replace the src value with your GIF file path or URL -->
+        <img src="assets/working-animation.gif" alt="Animated person working at desk">
+      </div>
     </div>
   </section>
 
@@ -232,9 +282,9 @@
   </section>
 
   <!-- Horizontal Download Resume Tab -->
-<a href="Shlok_Resume.pdf" class="resume-tab" download>
-  ⬇ Download Resume
-</a>
+  <a href="Shlok_Resume.pdf" class="resume-tab" download>
+    ⬇ Download Resume
+  </a>
 
   <!-- Footer -->
   <footer>
