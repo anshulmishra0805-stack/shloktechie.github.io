@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Shlok Mishra</title>
+
+    <style>
+        :root {
+            --primary: #2563eb;
+            --secondary: #0f172a;
+            --accent: #38bdf8;
+            --bg: #f8fafc;
+            --text: #334155;
+            --card: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 3rem 1rem;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 12px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        .card h2 {
+            color: var(--secondary);
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        .about-text {
+            font-size: 1.05rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .skill {
+            padding: 1.2rem;
+            border-left: 5px solid var(--primary);
+            background: #f1f5f9;
+            border-radius: 8px;
+        }
+
+        .skill h3 {
+            margin-bottom: 0.5rem;
+            color: var(--secondary);
+        }
+
+        .experience ul {
+            margin-top: 1rem;
+            padding-left: 1.2rem;
+        }
+
+        .experience li {
+            margin-bottom: 0.6rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--secondary);
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Shlok Mishra</h1>
+    <p>M365 • Azure AD • Intune • Identity & Security Specialist</p>
+</header>
+
+<div class="container">
+
+    <!-- About -->
+    <div class="card">
+        <h2>About Me</h2>
+        <p class="about-text">
+            I am an experienced IT professional specializing in enterprise identity, security,
+            and Microsoft cloud technologies. With hands-on expertise in Active Directory,
+            Azure AD (Entra ID), Microsoft 365, and Intune, I focus on building secure, scalable,
+            and efficient digital environments.
+            <br><br>
+            Currently working at <strong>HCLTech</strong>, I manage and support enterprise users,
+            cloud identities, endpoint security, and collaboration platforms while delivering
+            high-quality L1/L2 support and automation-driven solutions.
+        </p>
+    </div>
+
+    <!-- Skills -->
+    <div class="card">
+        <h2>Core Expertise</h2>
+        <div class="grid">
+            <div class="skill">
+                <h3>Identity & Access Management</h3>
+                <p>
+                    Active Directory, Azure AD / Entra ID, MFA, Conditional Access,
+                    PIM, AD Replication, Azure AD Connect
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>Endpoint & Device Management</h3>
+                <p>
+                    Microsoft Intune (MDM/MAM), BitLocker, LAPS,
+                    Windows Hello for Business, Compliance Policies
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>Microsoft 365 & Automation</h3>
+                <p>
+                    Exchange Online, Teams, SharePoint, OneDrive,
+                    PowerShell Automation, Power Automate, Copilot
+                </p>
+            </div>
+
+            <div class="skill">
+                <h3>Security & Compliance</h3>
+                <p>
+                    DLP, eDiscovery, Microsoft Purview,
+                    Audit Logs, VIP Account Protection
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="card experience">
+        <h2>Professional Experience</h2>
+        <h3>Analyst – HCLTech (Dec 2021 – Present)</h3>
+        <ul>
+            <li>Managing Active Directory & Azure AD for 3,000+ users</li>
+            <li>Implementing Conditional Access & MFA security policies</li>
+            <li>Supporting Exchange Online, Teams & collaboration services</li>
+            <li>Administering Intune across 2,000+ devices</li>
+            <li>Conducting email investigations using Microsoft Purview</li>
+        </ul>
+
+        <br>
+
+        <h3>Intern – HCLTech (Dec 2020 – Dec 2021)</h3>
+        <ul>
+            <li>Account provisioning/deprovisioning in Active Directory</li>
+            <li>Intune device enrollment & policy deployment</li>
+            <li>Mailbox conversions & Exchange administration</li>
+            <li>Incident documentation and SOP creation</li>
+        </ul>
+    </div>
+
+    <!-- Achievements -->
+    <div class="card">
+        <h2>Key Achievements</h2>
+        <ul>
+            <li>🏆 Outstanding Performance Award – 2023 & 2024</li>
+            <li>✅ 98% device compliance using Microsoft Intune</li>
+            <li>🔐 Organization-wide MFA & Conditional Access rollout</li>
+            <li>📘 Created internal SOPs and user training material</li>
+        </ul>
+    </div>
+
+</div>
+
+<footer>
+    © 2026 • Shlok Mishra • Cloud & Identity Specialist
+</footer>
+
+</body>
+</html>
